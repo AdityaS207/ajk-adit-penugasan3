@@ -31,6 +31,6 @@ jobs:
 
       - name: Install Composer dependencies
         run: |
-        composer install --no-dev --no-interaction --prefer-dist
-        composer update --no-dev --no-interaction --prefer-dist
+          composer install --no-dev --no-interaction --prefer-dist
+          composer update --no-dev --no-interaction --prefer-dist
 
