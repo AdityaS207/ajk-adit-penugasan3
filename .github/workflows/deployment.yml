@@ -29,5 +29,8 @@ jobs:
           php-version: 8.0
           extensions: mbstring, ctype, fileinfo, openssl, PDO, bcmath, json, tokenizer, xml
 
+      - name: Update Composer lock file
+        run: composer update --lock
+
       - name: Install Composer dependencies
         run: composer install --no-dev --no-interaction --prefer-dist
