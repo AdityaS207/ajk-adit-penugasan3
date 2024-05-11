@@ -36,3 +36,9 @@ jobs:
         env:
           GITHUB_SHA: ${{ github.sha }}
         run: tar -czf "{{GITHUB_SHA}}".tar.gz --exclude=*.git --exclude=node_modules --exclude=tests *
+
+      - name: Store artifact for distribution
+        uses: actions/upload-artifact@v3
+        with:
+          name: app-build
+          path: ${{ github.sha }}.tar.gz
