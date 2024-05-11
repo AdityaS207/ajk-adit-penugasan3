@@ -10,7 +10,7 @@ jobs:
     name: Create Deployment Artifact
     runs-on: ubuntu-latest
     steps:
-      - uses : actions/checkout@v2
+      - uses : actions/checkout@v3
 
       - name : Compile CSS and JavaScript
         run: |
