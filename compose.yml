@@ -14,9 +14,7 @@ services:
 
   app:
     container_name: app
-    build: 
-      context: .
-      dockerfile: Dockerfile
+    image: adityasitumorang/ci-cd-deployment:latest
     volumes:
       - .:/var/www/html
     networks:
