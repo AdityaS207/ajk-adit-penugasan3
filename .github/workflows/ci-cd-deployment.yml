@@ -58,7 +58,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
 
           script: |
-            docker pull ${{ secrets.DOCKER_USERNAME }}/ci-cd-deployment:latest
+            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/ci-cd-deployment:latest
             docker compose down
             docker compose up -d
             docker exec -it app php artisan migrate
