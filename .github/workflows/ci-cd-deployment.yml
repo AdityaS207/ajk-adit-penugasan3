@@ -3,7 +3,7 @@ name : ci-cd-deployment
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   docker:
