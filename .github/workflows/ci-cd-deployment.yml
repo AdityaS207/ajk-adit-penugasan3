@@ -56,3 +56,11 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
+
+          script: |
+            docker pull ${{ secrets.DOCKER_USERNAME }}/ci-cd-deployment:latest
+            docker-compose down
+            docker-compose up -d
+            php artisan migrate
+            php artisan db:seed
+            php artisan storage:link
