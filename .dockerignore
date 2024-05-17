@@ -2,4 +2,3 @@ Dockerfile
 *.md
 .git*
 cicd.sh
-.env.example
