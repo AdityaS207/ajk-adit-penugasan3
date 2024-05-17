@@ -14,7 +14,7 @@ WORKDIR /var/www/html
 
 COPY . /var/www/html
 
-COPY .env.example /var/www/html/.env
+COPY ./.env.example /var/www/html/.env
 
 RUN docker-php-ext-install pdo pdo_mysql \
     && apk --no-cache add nodejs npm
