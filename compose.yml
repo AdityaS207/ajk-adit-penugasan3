@@ -15,8 +15,6 @@ services:
   app:
     container_name: app
     image: adityasitumorang/ci-cd-deployment:latest
-    volumes:
-      - .:/var/www/html
     networks:
       - app-network
 
