@@ -39,13 +39,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: copy file via ssh password
+      - name: copy file via ssh key
         uses: appleboy/scp-action@v0.1.7
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          port: ${{ secrets.SSH_PORT }}
+          key: ${{ secrets.SSH_KEY }}
           source: "default.conf, compose.yml"
           target: .
         
